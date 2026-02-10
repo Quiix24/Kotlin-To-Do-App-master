@@ -40,6 +40,26 @@ A modern Android To-Do application built with Kotlin, featuring Firebase authent
 - Kotlin 1.6.0 or later
 - Firebase project setup
 
+## ⚠️ IMPORTANT: Firebase Setup Required
+
+This project requires Firebase configuration to work properly. Follow these steps:
+
+1. **Create a Firebase Project**
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project or use an existing one
+   - Enable Authentication and Realtime Database
+
+2. **Add Android App to Firebase**
+   - Click "Add app" and select Android
+   - Enter package name: `com.example.kotlintodopractice`
+   - Download the `google-services.json` file
+   - DON'T commit this file to git (it contains sensitive keys)
+
+3. **Configure the Project**
+   - Place `google-services.json` in the `app/` directory
+   - Copy from `app/google-services.json.template` if you need a template
+   - The app will not work without this file
+
 ## Setup
 
 1. **Clone the repository**
@@ -50,9 +70,11 @@ A modern Android To-Do application built with Kotlin, featuring Firebase authent
 
 2. **Firebase Setup**
    - Create a new project in [Firebase Console](https://console.firebase.google.com/)
-   - Add an Android app to your Firebase project
+   - Add an Android app to your Firebase project  
+   - Enter package name: `com.example.kotlintodopractice`
    - Download the `google-services.json` file
-   - Place it in the `app/` directory
+   - Place it in the `app/` directory (use `app/google-services.json.template` as reference)
+   - **IMPORTANT**: Never commit the real `google-services.json` to version control
    - Enable Authentication and Realtime Database in Firebase Console
 
 3. **Build and Run**
